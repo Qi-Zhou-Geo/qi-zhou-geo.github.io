@@ -1,0 +1,61 @@
+<div class="menu">
+  <div class="menu-table flex-row-space-between">
+
+    <!-- index -->
+    <div class="logo flex-row-center">
+      <a href="index.html">Qi Zhou</a>
+    </div>
+
+    <!-- menu image -->
+    <a class="menu-button" tabindex="0" href="javascript:void(0)">
+      <img src="img/menu.png">
+    </a>
+
+    <!-- menu list -->
+    <div class="menu-items flex-row-center flex-item">
+      <!-- You have to name the home page as index.html -->
+      <a class="menu-index" href="index.html">Home</a>
+
+      <a class="menu-Biography" href="Biography.html">Biography</a>
+      <a class="menu-Project" href="Project.html">Project</a>
+      <a class="menu-Publication" href="Publication.html">Publication</a>
+      <a href="https://www.gfz.de/en/staff/qi.zhou/sec47">Official Web</a>
+
+      <!-- menu dropdown -->
+      <!--
+      <div class="dropdown">
+        <a class="dropbtn" href="empty.html">Dropdown<i class="fas fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="index.html">Overview</a>
+          <a href="widgets.html">Widgets</a>
+          <a href="embedding.html">Embedding</a>
+        </div>
+      </div>
+
+      <a href="https://github.com/yenchiah/project-website-template">GitHub</a>
+      -->
+
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  // Get current page file name
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Get all menu links
+  const menuLinks = document.querySelectorAll('.menu-items a');
+
+  menuLinks.forEach(link => {
+    const linkPage = link.getAttribute('href');
+    if (linkPage === currentPage) {
+      link.style.fontWeight = '700';   // make it bold
+      link.style.color = '#fff';       // optional: match your menu color
+    } else {
+      link.style.fontWeight = '400';   // normal weight for other links
+      link.style.color = '';           // reset color
+    }
+  });
+</script>
