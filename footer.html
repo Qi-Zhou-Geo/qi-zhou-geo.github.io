@@ -1,16 +1,43 @@
+<!-- Font Awesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <div class="banner">
   <div class="banner-table flex-column">
     <div class="flex-row">
       <div class="flex-item flex-column">
 
-        <p class="text add-bottom-margin-large">
+        <p class="text">
           <strong>Find me at:</strong>
-          <a href="https://scholar.google.com/citations?hl=en&user=4_SsGCkAAAAJ&view_op=list_works&authuser=1&sortby=pubdate" target="_blank" rel="noopener noreferrer">Google Scholar</a>,
-          <a href="https://github.com/Qi-Zhou-Geo" target="_blank" rel="noopener noreferrer">GitHub</a>,
-          <a href="https://orcid.org/0000-0002-8610-8527" target="_blank" rel="noopener noreferrer">ORCID</a>
+
+          <a href="https://scholar.google.com/citations?hl=en&user=4_SsGCkAAAAJ&view_op=list_works&authuser=1&sortby=pubdate"
+            target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-google-scholar"></i> Google Scholar
+          </a>,
+
+           <a href="https://www.researchgate.net/profile/Qi-Zhou-101"
+            target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-researchgate"></i> ResearchGate
+          </a>,
+
+          <a href="https://github.com/Qi-Zhou-Geo" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>,
+
+          <a href="https://orcid.org/0000-0002-8610-8527" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-orcid"></i> ORCID
+          </a> <br>
+
+          <strong>Last updated:</strong> <span id="last-modified"></span>
         </p>
 
       </div>
     </div>
   </div>
 </div>
+
+<!-- For time stamps -->
+<script>
+  // Display the last modified date in ISO format (YYYY-MM-DD)
+  const lastModified = new Date(document.lastModified);
+  document.getElementById('last-modified').textContent = lastModified.toISOString().split('T')[0];
+</script>
